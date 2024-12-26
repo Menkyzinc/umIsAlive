@@ -52,12 +52,15 @@ def commands(command: str): # 입력되는 명령어들을 처리합니다.
             keySync(volume, stock)
         day += 1
         input("%d일차가 시작되었습니다." % day)
+        
     elif command == "help":
         input("""다음과 같은 명령어가 있습니다
 standard : 상품의 입고 기준을 설정합니다. 매 주 마지막 일에 재고량을 확인할 때, 입고 기준보다 적으면 발주를 넣습니다.
 purchase : 제품을 구매합니다. 재고 현황에서 구매 개수만큼이 차감됩니다.
 next : 다음 일로 넘어갑니다.""")
+        
     else: input("invalid command")
+        
 def order(stock: list): # 부족량을 자동으로 계산해 수요에 맞춰 필요한 만큼 발주해줍니다.
     id = list(stock.keys())
     inventory = list(stock.values())
