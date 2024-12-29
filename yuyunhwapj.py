@@ -48,12 +48,12 @@ def asking () :
   answer = input('명령어를 입력하세요: ')
   
   if answer == '암호화':
-    a = input('암호화할 문장을 입력하세요: ')
+    a = input('암호화할 문장을 띄어쓰기 없이 입력하세요: ')
     return makecipher(a)
     
 
   elif answer == '복호화':
-    a = input('복호화할 문장을 입력하세요: ')
+    a = input('복호화할 문장을 띄어쓰기 없이 입력하세요: ')
     return makeplain(a)
   
   elif answer == '암호화 키 입력':
